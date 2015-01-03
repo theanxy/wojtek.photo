@@ -15,15 +15,13 @@ Boulevard.prototype = {
 					e.preventDefault();
 
 					if ( !($('body').hasClass('k-source-album') || $('body').hasClass('k-source-favorites')) ) return true;
-
-					var _index = (!$('#album-intro').length) ? $(this).closest('.cell').index() + 1 : $(this).closest('.cell').index();
-					if ( _index < self.currentImage ) {
-						self.currentImage--;
-					} else if ( _index >= self.currentImage ) {
-						self.currentImage++;
-					}
-
-					self.laneScrollTo();
+					// var _index = (!$('#album-intro').length) ? $(this).closest('.cell').index() + 1 : $(this).closest('.cell').index();
+					// if ( _index < self.currentImage ) {
+					// 	self.currentImage--;
+					// } else if ( _index >= self.currentImage ) {
+					// 	self.currentImage++;
+					// }
+					// self.laneScrollTo();
 				});
 
 			$(window).trigger('resize');
@@ -90,7 +88,7 @@ Boulevard.prototype = {
 		var newLeftPos = (this.currentImage === 0 && $('#album-intro').length) ? 0 : $('#lane .cell:eq(' + this.currentImage + ')').offset().left;
 
 		$('html,body').stop().animate({
-			scrollLeft: ( newLeftPos - 80 )
+			scrollLeft: ( newLeftPos - 240 )
 		}, 400, this.easeOut);
 	},
 	lazyHold: function() {
@@ -113,7 +111,8 @@ Boulevard.prototype = {
 	},
 	updateLaneProperties: function() {
 		$('#lane').css({
-			top: ( $('header').css('display') === 'none' || $('header').css('visibility') === 'hidden' ) ? '0px' : $('header').height() + 'px',
+			// top: ( $('header').css('display') === 'none' || $('header').css('visibility') === 'hidden' ) ? '0px' : $('header').height() + 'px',
+			top: laneOffsetTop,
 			width: '99999px' // prevents jumpiness when defining width after images load
 		});
 	},
@@ -147,6 +146,8 @@ Boulevard.prototype = {
 
 Boulevard = new Boulevard();
 
+var laneOffsetTop = '50px';
+
 $(function() {
 
 	var blvd = window.Boulevard;
@@ -155,7 +156,7 @@ $(function() {
 
 	if ($('#site-title img').length) {
 		$('#site-title img').on('load', function() {
-			$('#lane').css('top', $('header').height() + 'px');
+			$('#lane').css('top', 0);
 		});
 	}
 
@@ -232,7 +233,8 @@ $(function() {
 
 	window.addEventListener( 'orientationchange', function() {
 		window.setTimeout(function() {
-			$('#lane').css( 'top', ( $('header').css('display') === 'none' || $('header').css('visibility') === 'hidden' ) ? '0px' : $('header').height() + 'px' );
+			// $('#lane').css( 'top', ( $('header').css('display') === 'none' || $('header').css('visibility') === 'hidden' ) ? '0px' : $('header').height() + 'px' );
+			$('#lane').css( 'top', laneOffsetTop);
 		},500)
 		return false;
 	});
