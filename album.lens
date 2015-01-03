@@ -98,7 +98,7 @@
 
 					</koken:if>
 
-					<koken:img lazy="true" respond_to="height" data-lazy-hold="true" />
+					<koken:link lightbox="true"><koken:img lazy="true" respond_to="height" data-lazy-hold="true" /></koken:link>
 
 				</koken:content_image>
 
