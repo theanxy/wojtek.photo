@@ -1,0 +1,7 @@
+<koken:include file="inc/head.html" />
+
+	<koken:include file="inc/header-page.html" />
+
+<iframe class="blog-iframe" src="http://blog.wojtekzajac.com"></iframe>
+
+<koken:include file="inc/footer.html" />

@@ -1,6 +1,6 @@
 <koken:include file="inc/head.html" />
 
-	<koken:load source="albums" limit="4" filter:category="Asia">
+	<koken:load limit="4">
 		<koken:head>
 			<meta property="og:site_name" content="{{ site.title }}" />
 			<meta property="og:title" content="{{ labels.album.plural }}" />
@@ -33,31 +33,17 @@
 
 	<koken:include file="inc/header-albums.html" />
 
-	<koken:load source="albums" filter:category="Asia">
-	<h2 class="continent">Asia:</h2>
+	<koken:load>
 
-		<koken:include file="inc/albums-theanxy.html" />
+		<koken:include file="inc/albums.html" />
 
-	</koken:load>
+		<koken:else>
 
-	<koken:load source="albums" filter:category="North America">
-	<h2 class="continent">North America:</h2>
+			<koken:note>
 
-		<koken:include file="inc/albums-theanxy.html" />
+				<p class="null"><strong>No albums found.</strong> Create some in the Library.</p>
 
-	</koken:load>
-
-	<koken:load source="albums" filter:category="europe">
-	<h2 class="continent">Europe:</h2>
-
-		<koken:include file="inc/albums-theanxy.html" />
-
-	</koken:load>
-
-	<koken:load source="albums" filter:category="australia">
-	<h2 class="continent">Australia:</h2>
-
-		<koken:include file="inc/albums-theanxy.html" />
+			</koken:note>
 
 	</koken:load>
 

@@ -43,6 +43,18 @@ ol#lane-nav {
     display: block;
 }
 
+/* Places page */
+.continent {
+    clear: both;
+}
+
 #albums {
-    padding-top: 100px;
+    overflow: hidden;
+}
+
+/* Blog */
+.blog-iframe {
+    width: 100%;
+    height: 900px;
+    border: 0;
 }

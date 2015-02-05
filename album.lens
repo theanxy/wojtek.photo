@@ -32,24 +32,6 @@
 		<div id="lane">
 	</koken:not>
 
-	<koken:if true="settings.album_show_intro">
-
-		<div id="album-intro" class="cell">
-
-			<div class="wrap">
-
-				<h1>
-					{{ album.title }}
-				</h1>
-
-				{{ album.description paragraphs="true" }}
-
-			</div>
-
-		</div>
-
-	</koken:if>
-
 	<koken:loop>
 
 		<div class="cell {{ content.file_type }}" data-aspect="{{ content.aspect_ratio }}">
