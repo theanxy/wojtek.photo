@@ -108,6 +108,7 @@ Boulevard.prototype = {
 		this.updateLaneProperties();
 		this.checkLane();
 		this.bindImages();
+		this.shortenPlaces();
 	},
 	updateLaneProperties: function() {
 		$('#lane').css({
@@ -141,6 +142,27 @@ Boulevard.prototype = {
 			cell.attr('data-vimeo', true);
 			self.updateLaneWidth();
 		});
+	},
+	shortenPlaces: function() {
+		var $places = $('.albums--grouped');
+		var button = '<div class="item item--teaser"><button>Show more…</button></div>';
+
+		var filterAlbums = function(index) {
+			var album = $places.eq(index);
+
+			if (album.find('.item').length > 3) {
+				album.append(button);
+			}
+
+			album.find('.item').not('.item--teaser').slice(3).addClass('item--extra');
+		}
+
+		$places.on('click', '.item--teaser button', function() {
+			$(this).closest('.albums--grouped').addClass('show-all');
+			$(this).parent().remove();
+		});
+
+		$places.each(filterAlbums);
 	}
 }
 
