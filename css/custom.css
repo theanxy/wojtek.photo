@@ -52,24 +52,34 @@ ol#lane-nav {
     overflow: hidden;
 }
 
-#albums .item--extra {
+#albums .item {
     position: absolute;
     left: -99999px;
     opacity: 0;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
-#albums.show-all .item--extra {
+#albums.show-all .item,
+#albums .item-1,
+#albums .item-2,
+#albums .item-3,
+#albums .item--teaser {
     position: static;
+    left: auto;
     opacity: 1;
-    -webkit-transition: all 2s ease;
-    -moz-transition: all 2s ease;
-    -ms-transition: all 2s ease;
-    -o-transition: all 2s ease;
-    transition: all 2s ease;
 }
 
 #albums .item--teaser {
     position: relative;
+    opacity: 0;
+}
+
+#albums .item--teaser.is-visible {
+    opacity: 1;
 }
 
 #albums .item--teaser button {

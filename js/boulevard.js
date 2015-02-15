@@ -152,9 +152,11 @@ Boulevard.prototype = {
 
 			if (album.find('.item').length > 3) {
 				album.append(button);
-			}
 
-			album.find('.item').not('.item--teaser').slice(3).addClass('item--extra');
+				window.setTimeout(function() {
+					album.find('.item--teaser').addClass('is-visible');
+				}, 0);
+			}
 		}
 
 		$places.on('click', '.item--teaser button', function() {
