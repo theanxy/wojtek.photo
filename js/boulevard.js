@@ -145,7 +145,7 @@ Boulevard.prototype = {
 	},
 	shortenPlaces: function() {
 		var $places = $('.albums--grouped');
-		var button = '<div class="item item--teaser"><button>Show more…</button></div>';
+		var button = '<div class="item item--teaser"><button type="button">Show more</button></div>';
 
 		var filterAlbums = function(index) {
 			var album = $places.eq(index);

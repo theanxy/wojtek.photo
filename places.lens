@@ -34,28 +34,28 @@
 	<koken:include file="inc/header-albums.html" />
 
 	<koken:load source="albums" filter:category="Asia">
-	<h2 class="continent">Asia:</h2>
+	<h2 class="continent">Asia</h2>
 
 		<koken:include file="inc/albums-theanxy.html" />
 
 	</koken:load>
 
 	<koken:load source="albums" filter:category="North America">
-	<h2 class="continent">North America:</h2>
+	<h2 class="continent">North America</h2>
 
 		<koken:include file="inc/albums-theanxy.html" />
 
 	</koken:load>
 
 	<koken:load source="albums" filter:category="europe">
-	<h2 class="continent">Europe:</h2>
+	<h2 class="continent">Europe</h2>
 
 		<koken:include file="inc/albums-theanxy.html" />
 
 	</koken:load>
 
 	<koken:load source="albums" filter:category="australia">
-	<h2 class="continent">Australia:</h2>
+	<h2 class="continent">Australia</h2>
 
 		<koken:include file="inc/albums-theanxy.html" />
 

@@ -1,3 +1,52 @@
+/* Icomoon fonts */
+@font-face {
+    font-family: 'icomoon';
+    src:url('/storage/themes/theanxy/font/icomoon.eot?ky0aaz');
+    src:url('/storage/themes/theanxy/font/icomoon.eot?#iefixky0aaz') format('embedded-opentype'),
+        url('/storage/themes/theanxy/font/icomoon.woff?ky0aaz') format('woff'),
+        url('/storage/themes/theanxy/font/icomoon.ttf?ky0aaz') format('truetype'),
+        url('/storage/themes/theanxy/font/icomoon.svg?ky0aaz#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-enlarge:before {
+    content: "\e98b";
+}
+
+.icon-geo2:before {
+    content: "\e9ca";
+}
+
+.icon-info:before {
+    content: "\ea0c";
+}
+
+.icon-geo3:before {
+    content: "\eae9";
+}
+
+.icon-geo:before {
+    content: "\e600";
+}
+
+
+/* Common styles */
+
 #container {
     padding-left: 200px;
 }
@@ -39,6 +88,12 @@ ol#lane-nav {
     box-sizing: content-box;
 }*/
 
+#lane .caption {
+    text-transform: uppercase;
+    font-weight: 200;
+    padding-left: 15px;
+}
+
 .album-img-wrapper {
     display: block;
 }
@@ -46,10 +101,22 @@ ol#lane-nav {
 /* Places page */
 .continent {
     clear: both;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 200;
 }
 
 #albums {
     overflow: hidden;
+    margin-left: 0;
+}
+
+#albums h2 {
+    font-weight: 400;
+}
+
+#albums h2 a {
+    color: #666;
 }
 
 #albums .item {
@@ -87,9 +154,74 @@ ol#lane-nav {
     border: 0;
     width: 100%;
     height: 167px;
+    font-size: 14px;
     font: inherit;
     outline: none;
+    font-weight: 200;
+    text-transform: uppercase;
 }
+
+
+/* Photo details */
+
+#lane .cell.image .content {
+    position: relative;
+}
+
+.photo__details {
+    opacity: 0;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#lane .cell.image .content:hover .photo__details {
+    opacity: 1;
+}
+
+.photo__exif,
+.photo__geo {
+    display: inline-block;
+}
+
+.photo__exif .exif {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    margin-top: 10px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.photo__exif:hover .exif {
+    opacity: 1;
+}
+
+.photo__icon {
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    padding: 6px;
+    background: rgba(0,0,0,.5);
+}
+
+.photo__geo {
+    margin: 0 auto;
+    text-align: center;
+}
+
 
 /* Blog */
 .blog-iframe {

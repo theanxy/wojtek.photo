@@ -82,33 +82,38 @@
 
 					<koken:link lightbox="true"><koken:img lazy="true" respond_to="height" data-lazy-hold="true" /></koken:link>
 
-					<koken:exif>
-						<li class="comma_sep">
-							<strong>EXIF:</strong>
-							<koken:not empty="exif.model">
-								<span>{{ exif.model }}</span>
-							</koken:not>
-							<koken:not empty="exif.exposure">
-								<span>{{ exif.exposure }}</span>
-							</koken:not>
-							<koken:not empty="exif.aperture">
-								<span>{{ exif.aperture }}</span>
-							</koken:not>
-							<koken:not empty="exif.focal_length">
-								<span>{{ exif.focal_length }}</span>
-							</koken:not>
-							<koken:not empty="exif.iso_speed_ratings">
-								<span>{{ exif.iso_speed_ratings }}</span>
-							</koken:not>
-						</li>
-					</koken:exif>
-					
-					<koken:geolocation>
-						<li>
-							<strong>Geolocation:</strong>
-							<a href="http://maps.google.com/?q={{ geolocation.latitude }},{{ geolocation.longitude }}" target="_blank">View map</a>
-						</li>
-					</koken:geolocation>
+					<div class="photo__details">
+						<koken:exif>
+							<div class="photo__exif">
+								<span class="photo__icon icon-info"></span>
+								<div class="exif">
+									<koken:not empty="exif.model">
+										<span>{{ exif.model }}</span>
+									</koken:not>
+									<koken:not empty="exif.exposure">
+										<span>{{ exif.exposure }}</span>
+									</koken:not>
+									<koken:not empty="exif.aperture">
+										<span>{{ exif.aperture }}</span>
+									</koken:not>
+									<koken:not empty="exif.focal_length">
+										<span>{{ exif.focal_length }}</span>
+									</koken:not>
+									<koken:not empty="exif.iso_speed_ratings">
+										<span>{{ exif.iso_speed_ratings }}</span>
+									</koken:not>
+								</div>
+							</div>
+						</koken:exif>
+						
+						<koken:geolocation>
+							<div class="photo__geo">
+								<a href="http://maps.google.com/?q={{ geolocation.latitude }},{{ geolocation.longitude }}" target="_blank">
+									<span class="photo__icon icon-geo"></span>
+								</a>
+							</div>
+						</koken:geolocation>
+					</div>
 
 				</koken:content_image>
 
