@@ -80,9 +80,15 @@
 
 					</koken:if>
 
-					<koken:link lightbox="true"><koken:img lazy="true" respond_to="height" data-lazy-hold="true" /></koken:link>
-
 					<div class="photo__details">
+						<koken:geolocation>
+							<div class="photo__geo">
+								<a href="http://maps.google.com/?q={{ geolocation.latitude }},{{ geolocation.longitude }}" target="_blank">
+									<span class="photo__icon icon-geo"></span>
+								</a>
+							</div>
+						</koken:geolocation>
+
 						<koken:exif>
 							<div class="photo__exif">
 								<span class="photo__icon icon-info"></span>
@@ -105,15 +111,9 @@
 								</div>
 							</div>
 						</koken:exif>
-						
-						<koken:geolocation>
-							<div class="photo__geo">
-								<a href="http://maps.google.com/?q={{ geolocation.latitude }},{{ geolocation.longitude }}" target="_blank">
-									<span class="photo__icon icon-geo"></span>
-								</a>
-							</div>
-						</koken:geolocation>
 					</div>
+
+					<koken:link lightbox="true"><koken:img lazy="true" respond_to="height" data-lazy-hold="true" /></koken:link>
 
 				</koken:content_image>
 
