@@ -47,36 +47,46 @@
 
 /* Common styles */
 
-#container {
-    padding-left: 200px;
-}
+@media only screen and (min-width: 768px) {
 
-header {
-    position: fixed;
-    margin-left: -200px;
-    box-sizing: content-box;
-    width: 200px;
-    height: 100%;
-    background: #fff;
-    z-index: 1000 !important;
-}
+    #container {
+        padding-left: 200px;
+        /* Fix collapsing margins */
+        margin-top: -1px;
+        padding-top: 1px;
+    }
 
-header .in {
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    header {
+        position: fixed;
+        margin-left: -200px;
+        box-sizing: content-box;
+        width: 200px;
+        height: 100%;
+        background: #fff;
+        z-index: 1000 !important;
+    }
 
-header nav {
-    position: absolute;
-    top: 200px;
-}
+    header .in {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 45px;
+    }
 
-header nav li {
-    display: block;
-}
+    header nav {
+        position: absolute;
+        top: 250px;
+    }
 
-h2.tag {
-    margin-top: 0;
+    header nav li {
+        display: block;
+    }
+
+    h2.tag {
+        margin-top: 0;
+        display: block;
+        line-height: 1.1;
+    }
+
 }
 
 ol#lane-nav {
@@ -104,6 +114,12 @@ ol#lane-nav {
     text-transform: uppercase;
     font-size: 24px;
     font-weight: 200;
+}
+
+@media only screen and (max-width: 767px) {
+    .continent {
+        margin: 0 15px;
+    }
 }
 
 #albums {
