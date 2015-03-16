@@ -109,6 +109,7 @@ Boulevard.prototype = {
 		this.checkLane();
 		this.bindImages();
 		this.shortenPlaces();
+		this.blogHeight();
 	},
 	updateLaneProperties: function() {
 		$('#lane').css({
@@ -165,6 +166,11 @@ Boulevard.prototype = {
 		});
 
 		$places.each(filterAlbums);
+	},
+	blogHeight: function() {
+		var w_height = $(window).height();
+
+		$('.blog-iframe').height(w_height);
 	}
 }
 
