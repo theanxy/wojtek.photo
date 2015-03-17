@@ -178,6 +178,10 @@ Boulevard = new Boulevard();
 
 var laneOffsetTop = '50px';
 
+if ($('.k-source-album').length && $(window).width() < 480) {
+	laneOffsetTop = '120px';
+}
+
 $(function() {
 
 	var blvd = window.Boulevard;
