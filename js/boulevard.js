@@ -231,9 +231,11 @@ $(function() {
 					if ($('#lane').length) {
 						var self = $(this);
 
+						var text = $(this).text().trim().length ? $(this).text().trim() : $(this).find('img').attr('alt');
+
 						// Write the album title or remove it
 						if ( $(this).closest('#lane').length > 0 ) {
-							$('#site-title h2').html( '/&nbsp;' + $(this).text().trim());
+							$('#site-title h2').html( '/&nbsp;' + text);
 						} else {
 							$('#site-title h2').html('');
 						}
