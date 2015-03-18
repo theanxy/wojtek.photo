@@ -66,7 +66,7 @@ Boulevard.prototype = {
 			_height = e[ a+'Height' ],
 			_hBreakpoint;
 
-		if (_height >= 1000) {
+		if (_height >= 1200) {
 			_hBreakpoint = 800;
 		} else if (_width < 767) {
 			_hBreakpoint = 165;
@@ -178,7 +178,7 @@ Boulevard = new Boulevard();
 
 var laneOffsetTop = '50px';
 
-if ($('.k-source-album').length && $(window).width() < 480) {
+if ($(window).width() < 480) {
 	laneOffsetTop = '120px';
 }
 

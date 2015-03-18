@@ -643,7 +643,7 @@ div#kdiscuss {
 
 }
 
-@media only screen and (min-height: 900px) {
+@media only screen and (min-height: 1000px) {
 
 	#lane .content,
 	#lane img,
@@ -655,7 +655,7 @@ div#kdiscuss {
 
 }
 
-@media only screen and (min-height: 1000px) {
+@media only screen and (min-height: 1200px) {
 
 	#lane .content,
 	#lane img,
